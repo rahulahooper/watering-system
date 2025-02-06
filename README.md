@@ -1,3 +1,5 @@
+<img src="main.jpg" alt="main" width="500"/>
+
 ## What is this?
 A hobby project that came about after too many of my plants died because I forgot to water them.
 
