@@ -1,4 +1,4 @@
-<img src="main.jpg" alt="main" width="500"/>
+<img src="main.jpg" alt="main" width="300"/>
 
 ## What is this?
 A hobby project that came about after too many of my plants died because I forgot to water them.
@@ -39,7 +39,9 @@ center of the display; and one ground pin.
 To turn on any individual segment on the first digit, you have to select pull the digit pin low and also assert the pin associated with that segment. 
 To display something meaningful on the display, like a bunch of numbers, you have to rapidly enable a digit, light up all the segments that make
 up a number, then turn off all the digits and switch over to the next digit. If you do this fast enough, the display will appear to show a persistent
-sequence of numbers (at least to our mortal human eyes). 
+sequence of numbers (at least to our mortal human eyes). See schematic below:
+
+<img src="display.png" alt="pump" width="400"/>
 
 The display, as mentioned before, consumes 13 GPIOs on the ESP32 - a lot of real estate. In the future I'd probably add a serial-to-parallel
 shift register onto the board. That way I could use a single GPIO on the ESP32 to control the entire display!
