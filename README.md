@@ -23,6 +23,8 @@ battery down to 5V.
 The water pump is a 5W PULACO water pump with a USB connector. It connects to the main PCB via a USB breakout board that you can get off Amazon
 [link](https://www.amazon.com/gp/product/B09WQHPXH6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). 
 
+<img src="pump.JPG" alt="pump" width="500"/>
+
 As the ESP32 cannot supply enough power by itself to drive the board, I instead used an IRF530 MOSFET paired with a 3.3v -> 5v logic level converter.
 The logic-level converter was necessary because the ESP32 GPIOs can only swing up to 5v, and the IRF530, which was the only power transistor
 I had on hand, would only turn on if the gate voltage was at least 5V. In hindsight, it would have saved board space to just purchase a 3.3v
@@ -40,8 +42,10 @@ sequence of numbers (at least to our mortal human eyes).
 The display, as mentioned before, consumes 13 GPIOs on the ESP32 - a lot of real estate. In the future I'd probably add a serial-to-parallel
 shift register onto the board. That way I could use a single GPIO on the ESP32 to control the entire display!
 
+<img src="sipo.png" alt="shift register" width="500"/>
+
 ## Circuit Diagram
 
 I designed the PCB with EasyEDA and had it printed out through JLCPCB.
 
-
+<img src="schematic.png" alt="schematic" width="500"/>
